@@ -1,0 +1,121 @@
+{
+  "business": {
+    "name": "Duvell Bookkeeping Services",
+    "known_as": "Duvell Bookkeeping Services",
+    "legal_name": "Duvell Industries LLC",
+    "owner": "Antoni D. Sullivan",
+    "street": "147-35 95th Ave",
+    "city": "Jamaica",
+    "state": "NY",
+    "postal_code": "11435",
+    "country": "US",
+    "phone": "(800) 380-1976",
+    "email": "info@duvellbookkeeping.com",
+    "website_current": "https://duvellbookkeeping.com",
+    "timezone": "America/New_York"
+  },
+  "online": {
+    "facebook": "https://www.facebook.com/profile.php?id=61593302362436",
+    "instagram": "https://www.instagram.com/duvellbookkeeping/",
+    "linkedin": "https://www.linkedin.com/company/duvell-bookkeeping-services/",
+    "tiktok": "https://www.tiktok.com/@duvell11",
+    "google_business_profile": "https://share.google/3NZrSQ77Zbj9rWKRf",
+    "google_review_link": ""
+  },
+  "hours": "Monday to Friday, 9 AM to 5 PM Eastern; Saturday and Sunday closed (taken from the current website, client to confirm)",
+  "areas_served": [
+    "Remote, across the US"
+  ],
+  "primary_city": "New York, NY (based in Jamaica, Queens)",
+  "services": [
+    "Monthly bookkeeping",
+    "Bookkeeping cleanup",
+    "Account reconciliation",
+    "Month-end close",
+    "Financial reporting",
+    "Cash flow reporting",
+    "Accounts receivable",
+    "Accounts payable",
+    "Payroll support",
+    "Fixed asset tracking"
+  ],
+  "services_csv_names": [
+    "Financial Reporting",
+    "Bookkeeping Cleanup",
+    "Bookkeeping Services",
+    "Account Reconciliation",
+    "Fixed Asset Tracking",
+    "Cash Flow Reporting",
+    "Month-End Close",
+    "Payroll Support",
+    "Accounts Receivable",
+    "Accounts Payable"
+  ],
+  "booking_system_current": "Calendly (free 30-minute consultation) linked from the current website. The new site does not book; raise with the agency owner.",
+  "brand": {
+    "colour_main": "#051531",
+    "colour_accent": "#DDB049",
+    "colours_other": [
+      "#F7F3EC",
+      "#7C5A10",
+      "#0A1F44"
+    ],
+    "font": "Playfair Display (headings) and Inter (body), self-hosted in public/assets/fonts",
+    "notes": "Client left colours and fonts blank. Navy #051531 and gold #DDB049 taken from the logo and the current website. #F7F3EC is the ivory tinted band, #7C5A10 is the text-safe gold on light backgrounds, #0A1F44 is the lighter navy for cards on navy. Fonts match the current website."
+  },
+  "images": [
+    {
+      "file": "logo-duvell-industries-transparent.png",
+      "note": "Full Duvell Industries LLC logo (gold D in a circle, white DUVELL, white INDUSTRIES LLC) with the black background removed. Light on transparent, so only use on navy. Made from duvell-logo.jpg on the current website."
+    },
+    {
+      "file": "logo-icon.png",
+      "note": "The circular gold D emblem with white DUVELL, without the INDUSTRIES LLC line, transparent background. Header, intro animation, favicon. Only use on navy."
+    },
+    {
+      "file": "hero-office-desk.jpg",
+      "note": "AI-generated illustration (Higgsfield). Sunlit desk, laptop with charts, brick building outside. Home hero, financial reporting. Never presented as the real office."
+    },
+    {
+      "file": "bookkeeping-services.jpg",
+      "note": "AI-generated illustration (Higgsfield). Hands writing in a ledger, calculator, receipts. Monthly bookkeeping, payroll support. Not the owner."
+    },
+    {
+      "file": "bookkeeping-cleanup.jpg",
+      "note": "AI-generated illustration (Higgsfield). Hands sorting receipts into stacks. Bookkeeping cleanup. Not the owner or a client."
+    },
+    {
+      "file": "financial-reporting.jpg",
+      "note": "AI-generated illustration (Higgsfield). Laptop and monitor with abstract charts. Services overview, financial reporting."
+    },
+    {
+      "file": "account-reconciliation.jpg",
+      "note": "AI-generated illustration (Higgsfield). Hands comparing highlighted printouts. Account reconciliation."
+    },
+    {
+      "file": "payroll-support.jpg",
+      "note": "AI-generated illustration (Higgsfield). Desk with laptop, folders, envelopes and clock. Payroll support."
+    },
+    {
+      "file": "remote-consultation.jpg",
+      "note": "AI-generated illustration (Higgsfield). Person seen from behind on a video call. Home steps section, contact page. Never presented as the owner or a client."
+    },
+    {
+      "file": "organized-documents.jpg",
+      "note": "AI-generated illustration (Higgsfield). Binders and folders on a sunlit desk. About, monthly bookkeeping, month-end close."
+    }
+  ],
+  "images_note": "Each photo also has a 960px version (name-960.jpg) for phones. No real photo of the owner exists yet. The current website shows a photo labelled Owner; it was not used because it could not be confirmed as a real photo.",
+  "must_keep": "",
+  "integrations": {
+    "form_embed": "<iframe\n    src=\"https://api.leadconnectorhq.com/widget/form/P3fIlMHnjh2t0tnhACOz\"\n    style=\"display:none;width:100%;height:100%;border:none;border-radius:10px\"\n    id=\"sticky-sidebar-left-P3fIlMHnjh2t0tnhACOz\"\n    data-layout=\"{'id':'STICKY_SIDEBAR','minimizedTitle':'Contact us','isLeftAligned':true,'isRightAligned':false,'allowMinimize':true,'buttonColor':'#101828','buttonType':'text','buttonSize':'medium','buttonIcon':'chat','cornerRadius':{'tl':8,'tr':8,'bl':8,'br':8},'fontSize':16}\"\n    data-trigger-type=\"alwaysShow\"\n    data-trigger-value=\"\"\n    data-activation-type=\"alwaysActivated\"\n    data-activation-value=\"\"\n    data-deactivation-type=\"neverDeactivate\"\n    data-deactivation-value=\"\"\n    data-form-name=\"Website Form (Duvell Bookkeeping Services)\"\n    data-height=\"483\"\n    data-layout-iframe-id=\"sticky-sidebar-left-P3fIlMHnjh2t0tnhACOz\"\n    data-form-id=\"P3fIlMHnjh2t0tnhACOz\"\n    data-cookie-consent=\"true\"\n    data-cookie-consent-provider=\"auto\"\n    title=\"Website Form (Duvell Bookkeeping Services)\"\n        >\n</iframe>\n<script src=\"https://link.msgsndr.com/js/form_embed.js\"></script>",
+    "chat_widget": "<script src=\"https://widgets.leadconnectorhq.com/loader.js\" data-resources-url=\"https://widgets.leadconnectorhq.com/chat-widget/loader.js\" data-widget-id=\"6af71d64f31f8c02e66a1dcd\"></script>",
+    "review_link": ""
+  },
+  "crm_location_id": "",
+  "vercel_project": "",
+  "hosting": "Cloudflare Pages (output directory public, no build command)",
+  "cloudflare_project": "duvellbookkeeping",
+  "preview_url": "https://duvellbookkeeping.pages.dev",
+  "domain": "www.duvellbookkeeping.com"
+}

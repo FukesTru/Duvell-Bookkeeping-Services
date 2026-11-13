@@ -1,0 +1,20 @@
+# Search engines and AI crawlers are blocked until the site goes live.
+# At go-live, replace this whole file with the version below (also remove the X-Robots-Tag line in _headers):
+#
+# User-agent: *
+# Allow: /
+#
+# User-agent: GPTBot
+# User-agent: OAI-SearchBot
+# User-agent: ChatGPT-User
+# User-agent: ClaudeBot
+# User-agent: Claude-SearchBot
+# User-agent: PerplexityBot
+# User-agent: Google-Extended
+# User-agent: Bingbot
+# Allow: /
+#
+# Sitemap: https://www.duvellbookkeeping.com/sitemap.xml
+
+User-agent: *
+Disallow: /
