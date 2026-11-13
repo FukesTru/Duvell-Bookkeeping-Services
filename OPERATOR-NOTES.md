@@ -1,14 +1,15 @@
 # Operator notes for the Duvell build (not for the client)
 
 ## Fix in GoHighLevel before review
-1. **Form layout.** The form embed is set to Sticky Sidebar with trigger "always show". It opens by
-   itself over the left side of every page on load (525px wide on desktop, the full screen width on
-   phones) until the visitor minimises it. The site uses the code exactly as given. Every Contact us
-   button on the site opens this sidebar. To stop it covering the page, change the trigger in
-   GoHighLevel (or switch the layout to Inline and send the new embed code).
+1. **Form layout (done on the site).** The form now uses the INLINE layout (same form ID
+   P3fIlMHnjh2t0tnhACOz, `data-layout="{'id':'INLINE'}"`, trigger alwaysShow, no sidebar, popup or
+   activation attributes). It sits inside the #contact section on every page and never floats or
+   opens by itself. This replaces the Sticky Sidebar code given in ADDONS-duvell.md; the exact code in
+   use is `integrations.form_embed` in `site.json`. Nothing needs changing in GoHighLevel for this.
 2. **Chat greeting.** The chat widget's pop-up message reads "Hey this is (Person), shoot me a quick
    text here (I respond in 2 minutes)". Replace "(Person)" with the owner's name and drop the
-   2-minute promise.
+   2-minute promise. On phones this pop-up also sits over the bottom of the contact form until the
+   visitor closes it, so consider turning the pop-up message off.
 3. **Chat colour.** The chat button is GoHighLevel's default blue (#155EEF). Set it to navy #051531 so
    it matches the call and contact buttons beside it on phones.
 4. **Review link.** `integrations.review_link` in `site.json` is empty, so the site has no "leave us a

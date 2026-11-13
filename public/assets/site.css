@@ -467,7 +467,6 @@ strong { color: var(--ink); font-weight: 650; }
 @media (min-width: 960px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 64px; } }
 .form-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: var(--card-pad); border-top: 4px solid var(--gold); }
 .form-card h3 { font-family: var(--font-head); font-size: 28px; font-weight: 600; margin-bottom: 10px; }
-.form-card .btn { width: 100%; margin-top: 8px; }
 .form-card .alt { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; gap: 10px; font-size: 16px; }
 .contact-lines { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 14px; }
 .contact-lines li { display: flex; gap: 14px; align-items: flex-start; }
@@ -476,11 +475,12 @@ strong { color: var(--ink); font-weight: 650; }
 .contact-lines .label { display: block; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 650; }
 .contact-lines a, .contact-lines .value { font-weight: 600; color: var(--navy); text-decoration: none; font-size: 17px; }
 .contact-lines a:hover { color: var(--gold-text); text-decoration: underline; }
-.ghl-form-host { min-height: 0; }
+/* The website form (GoHighLevel inline embed), full width of the form card. Space is held while it loads. */
+.form-embed { margin-top: 20px; min-height: 560px; border-radius: 10px; background: var(--white); }
+.form-embed iframe { display: block; width: 100%; min-height: 560px; }
+.form-note { margin-top: 14px; }
+@media (max-width: 759px) { .form-embed { margin-left: calc(var(--card-pad) * -1); margin-right: calc(var(--card-pad) * -1); } }
 
-/* GoHighLevel form panel: give the panel a solid background so page text never shows through it. */
-iframe#sticky-sidebar-left-P3fIlMHnjh2t0tnhACOz { background: #FFFFFF; box-shadow: 0 18px 50px rgba(5, 21, 49, 0.25); }
-.ep-iFrameContainer.ghl-attn { box-shadow: 0 0 0 4px var(--gold) !important; transition: box-shadow .3s; }
 
 /* Contact page cards */
 .contact-cards { display: grid; gap: 16px; }
@@ -605,5 +605,5 @@ html.intro-done::before, html.intro-done .intro-stage { animation: intro-out .3s
 }
 
 @media print {
-  .site-header, .fab, .fab-blur, .footer-cta, .ghl-form-host { display: none !important; }
+  .site-header, .fab, .fab-blur, .footer-cta, .form-embed { display: none !important; }
 }
