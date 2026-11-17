@@ -241,43 +241,110 @@ strong { color: var(--ink); font-weight: 650; }
 }
 @media (min-width: 1080px) and (max-width: 1279px) { .brand-text { display: none; } }
 
+/* Heroes and the chat bubble.
+   The chat widget's welcome bubble opens over the bottom-right of the screen: on a phone it covers
+   the bottom 200px across nearly the full width, on desktop the bottom 200px of the right 330px.
+   Phone and tablet (under 960px): .hero-first fills the first screen and ends in an empty band
+   (--chat-zone) where the bubble opens. Eyebrow, headline, buttons and photo sit above it; the rest
+   of the hero (.hero-rest) follows below the first screen.
+   Desktop: the hero reaches the bottom of the first screen, copy sits on the left and the photo on
+   the right stops above the band, so the bottom-right corner holds nothing but hero background. */
+:root { --chat-zone: 210px; --hero-top: 24px; }
+@media (min-width: 960px) { :root { --chat-zone: 200px; --hero-top: 72px; } }
+
 /* Home hero: full-bleed photo with a navy overlay from the left */
 .home-hero { position: relative; overflow: hidden; background: var(--navy); color: var(--on-navy); }
 .home-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% center; }
 .home-hero::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(5, 21, 49, 0.90) 0%, rgba(5, 21, 49, 0.82) 60%, rgba(5, 21, 49, 0.72) 100%);
+  background: linear-gradient(180deg, rgba(5, 21, 49, 0.90) 0%, rgba(5, 21, 49, 0.80) 55%, rgba(5, 21, 49, 0.70) 100%);
 }
-.home-hero-inner { position: relative; z-index: 1; padding-top: 44px; padding-bottom: 96px; }
+.home-hero-inner { position: relative; z-index: 1; padding-top: var(--hero-top); padding-bottom: 56px; }
 .home-hero h1 { color: var(--white); max-width: 14ch; }
 .home-hero h1 .line { display: block; }
-.home-hero .hero-sub { font-size: 18px; line-height: 1.6; margin-top: 22px; max-width: 58ch; color: #E3E7EE; }
+.home-hero .hero-sub { font-size: 18px; line-height: 1.6; margin: 0; max-width: 58ch; color: #E3E7EE; }
 @media (min-width: 760px) { .home-hero .hero-sub { font-size: 20px; } }
-@media (min-width: 960px) {
-  .home-hero { min-height: 640px; display: flex; align-items: center; }
-  .home-hero > .wrap { width: 100%; }
-  .home-hero::after { background: linear-gradient(90deg, rgba(5, 21, 49, 0.92) 0%, rgba(5, 21, 49, 0.78) 45%, rgba(5, 21, 49, 0.15) 100%); }
-  .home-hero-inner { padding-top: 88px; padding-bottom: 88px; }
-  .home-hero-copy { max-width: 640px; }
-}
-.proof { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; font-size: 15px; color: #E3E7EE; }
+.proof { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; font-size: 15px; color: #E3E7EE; }
 .proof li { display: flex; align-items: center; gap: 10px; line-height: 1.35; }
 .proof svg { width: 20px; height: 20px; flex: none; color: var(--gold); }
 @media (min-width: 900px) { .proof { display: flex; flex-wrap: nowrap; gap: 26px; white-space: nowrap; } }
 
 /* Inner page hero (navy, photo on the right) */
-.page-hero { position: relative; overflow: hidden; padding: 48px 0 64px; }
-.page-hero-grid { display: grid; gap: 36px; align-items: center; position: relative; z-index: 1; }
-.page-hero h1 { color: var(--white); }
-.page-hero-media img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
-@media (min-width: 960px) {
-  .page-hero { padding: 80px 0 88px; }
-  .page-hero-grid.has-media { grid-template-columns: 1.05fr 0.95fr; gap: 56px; }
-  .page-hero-media img { aspect-ratio: 4 / 3; }
+.page-hero { position: relative; overflow: hidden; padding: var(--hero-top) 0 0; }
+.page-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); position: relative; z-index: 1; }
+.page-hero h1 { color: var(--white); margin: 0; }
+.page-hero .answer { margin: 0; }
+.page-hero-media img { width: 100%; object-fit: cover; border-radius: var(--radius); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
+.hero-first > .eyebrow { align-self: flex-start; }
+.hero-first > .btn-row { margin-top: 22px; }
+.hero-first > .answer { margin-top: 18px; }
+
+@media (max-width: 959px) {
+  .hero-first {
+    display: flex; flex-direction: column;
+    min-height: calc(100vh - var(--header-h) - var(--hero-top));
+    min-height: calc(100svh - var(--header-h) - var(--hero-top));
+    padding-bottom: var(--chat-zone);
+  }
+  .hero-first > .eyebrow { margin-bottom: 12px; }
+  /* The photo fills the space between the buttons and the band kept for the chat bubble */
+  .hero-first > .page-hero-media { position: relative; flex: 1 1 0; min-height: 150px; margin-top: 20px; }
+  .hero-first > .page-hero-media img { position: absolute; inset: 0; height: 100%; }
+  /* A hero with no photo sits in the middle of the space above the band */
+  .solo > .hero-first, .home-hero .hero-first { justify-content: center; }
+  .page-hero .hero-rest { padding-bottom: 48px; }
+  .page-hero .hero-rest .answer { font-size: 18px; }
+  .home-hero-inner { padding-bottom: 48px; }
 }
+@media (min-width: 560px) and (max-width: 959px) { .hero-first > .btn-row { align-self: flex-start; } }
+
 @media (min-width: 960px) {
-  .page-hero-grid.has-media.flip { grid-template-columns: 0.95fr 1.05fr; }
-  .page-hero-grid.flip .page-hero-media { order: -1; }
+  /* Desktop: the hero fills the first screen; copy left, photo right, bottom-right corner left clear */
+  .page-hero-grid {
+    min-height: min(calc(100vh - var(--header-h) - var(--hero-top)), 860px);
+    padding-bottom: 72px; align-items: start;
+    grid-template-areas: "eyebrow" "title" "lede" "cta";
+    grid-template-rows: auto auto auto 1fr;
+  }
+  .page-hero-grid.solo { min-height: 0; padding-bottom: 80px; }
+  .page-hero-grid.has-media {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); column-gap: 56px;
+    grid-template-areas: "eyebrow media" "title media" "lede media" "cta media" ". media";
+    grid-template-rows: repeat(4, auto) 1fr;
+  }
+  .page-hero-grid .hero-first, .page-hero-grid .hero-rest { display: contents; }
+  .page-hero-grid .eyebrow { grid-area: eyebrow; justify-self: start; margin-bottom: 16px; }
+  .page-hero-grid h1 { grid-area: title; }
+  .page-hero-grid .answer { grid-area: lede; margin-top: 22px; }
+  .page-hero-grid .btn-row { grid-area: cta; margin-top: 30px; justify-self: start; }
+  .page-hero-media { grid-area: media; align-self: start; margin-top: 6px; }
+  .page-hero-media img {
+    aspect-ratio: 4 / 3;
+    max-height: max(260px, calc(100vh - var(--header-h) - var(--hero-top) - var(--chat-zone) - 30px));
+  }
+  /* Alternate heroes (every other service): a taller crop inside a gold frame, copy still on the left */
+  .page-hero-grid.alt .page-hero-media { position: relative; padding: 0 0 16px 16px; }
+  .page-hero-grid.alt .page-hero-media::before {
+    content: ""; position: absolute; left: 0; bottom: 0; width: 72%; height: 72%;
+    border: 2px solid var(--gold); border-radius: var(--radius); opacity: .7;
+  }
+  .page-hero-grid.alt .page-hero-media img { position: relative; aspect-ratio: 1 / 1; }
+
+  .home-hero { display: flex; align-items: center; min-height: max(640px, min(calc(100vh - var(--header-h)), 900px)); }
+  .home-hero > .wrap { width: 100%; }
+  .home-hero::after { background: linear-gradient(90deg, rgba(5, 21, 49, 0.92) 0%, rgba(5, 21, 49, 0.78) 45%, rgba(5, 21, 49, 0.15) 100%); }
+  .home-hero-inner { padding-top: 72px; padding-bottom: 72px; }
+  .home-hero-copy { max-width: 640px; }
+  .home-hero .hero-sub { margin-top: 22px; }
+  .home-hero .hero-rest { margin-top: 0; }
+  /* Desktop order: eyebrow, headline, lede, buttons, proof */
+  .home-hero-copy { display: flex; flex-direction: column; }
+  .home-hero-copy .hero-first, .home-hero-copy .hero-rest { display: contents; }
+  .home-hero-copy .eyebrow { order: 1; }
+  .home-hero-copy h1 { order: 2; }
+  .home-hero-copy .hero-sub { order: 3; }
+  .home-hero-copy .btn-row { order: 4; margin-top: 30px; }
+  .home-hero-copy .proof { order: 5; }
 }
 .hero-mark { display: none; }
 @media (min-width: 1200px) {
@@ -500,6 +567,9 @@ a.card, .card.lift { text-decoration: none; color: inherit; }
 .form-embed { margin-top: 16px; min-height: 540px; border-radius: 10px; background: var(--white); }
 .form-embed iframe { display: block; width: 100%; min-height: 540px; }
 .form-note { margin-top: 12px; }
+.form-card .alt { margin-top: 12px; padding-top: 0; border-top: 0; }
+.form-embed { margin-top: 18px; }
+@media (max-width: 959px) { .contact-section { padding-bottom: calc(var(--section) + var(--chat-zone) - 40px); } }
 @media (max-width: 759px) { .form-embed { margin-left: calc(var(--card-pad) * -1); margin-right: calc(var(--card-pad) * -1); } }
 .contact-lines { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 14px; }
 .contact-lines li { display: flex; gap: 14px; align-items: center; }
@@ -648,7 +718,7 @@ html.intro-done::before, html.intro-done .intro-stage { animation: intro-out .3s
   .section-head { margin-bottom: 32px; }
   .footer-logo { width: 90px; }
 }
-@media (max-width: 759px) { .form-card .alt { display: none; } .contact-media img { aspect-ratio: 21 / 9; margin-top: 20px; } }
+@media (max-width: 759px) { .contact-media img { aspect-ratio: 21 / 9; margin-top: 20px; } }
 @media (max-width: 639px) { .footer-tz { display: none; } .footer-logo { width: 72px; margin-bottom: 12px; } .pkg-cards.compact .btn { min-height: 48px; } .footer-grid { padding-top: 44px; } }
 .footer-hours .sum { display: none; }
 @media (max-width: 1079px) { .footer-hours .d { display: none; } .footer-hours .sum { display: flex; } }
@@ -661,15 +731,6 @@ html.intro-done::before, html.intro-done .intro-stage { animation: intro-out .3s
 /* Related links: four in a row on wide screens */
 @media (min-width: 1080px) { .related.four { grid-template-columns: repeat(4, 1fr); } }
 
-/* Phone heroes: the call and contact buttons come straight after the headline,
-   so both are fully on screen before the chat greeting or the round buttons can cover them. */
-@media (max-width: 759px) {
-  .page-hero-grid > .reveal:first-child, .home-hero-copy { display: flex; flex-direction: column; }
-  .page-hero-grid > .reveal:first-child > .btn-row, .home-hero-copy > .btn-row { order: 3; margin-top: 24px; }
-  .page-hero-grid > .reveal:first-child > .answer, .home-hero-copy > .hero-sub { order: 4; margin-top: 24px; }
-  .home-hero-copy > .proof { order: 5; }
-  .page-hero .eyebrow, .home-hero .eyebrow { align-self: flex-start; }
-}
 /* The site's round phone buttons wait until the visitor scrolls past the hero (set by site.js). */
 @media (max-width: 1079px) {
   .fab, .fab-blur { transition: opacity .25s var(--ease), visibility .25s; }

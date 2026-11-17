@@ -47,7 +47,7 @@
   the client's verbatim copy or the form, so it was left there.
 
 ## Revision 3 (Antonio name fix, one photo per page, service areas)
-- Owner name corrected to Antonio D. Sullivan everywhere (`rg -P "Antoni(?!o)"` is empty). The chat
+- Owner name corrected to Antonio D. Sullivan everywhere (a search for the misspelling finds nothing). The chat
   greeting in GoHighLevel already says "Antonio" but still promises a 2-minute reply.
 - 21 new photos generated with Higgsfield GPT Image 2.6; three were regenerated after inspection
   (a notebook with fake-looking words, a garage with a readable tool brand). `bookkeeper-at-work`,
@@ -60,3 +60,16 @@
   counts as a breadcrumb. Visible breadcrumbs still fail the check.
 - On phones the site's round call and contact buttons stay hidden until the visitor scrolls past the
   hero, and the hero buttons come straight after the headline, so the chat greeting never covers them.
+
+## Revision 3b (chat bubble clearance)
+- Every hero now fills the first screen. On phones the headline, buttons and photo sit above a 210px
+  band left empty for the chat widget's welcome bubble; the hero paragraph follows below. On desktop
+  the hero reaches the bottom of the first screen, copy stays on the left and the photo stops above
+  the bubble's corner.
+- The alternating service heroes no longer put the photo on the left (that pushed the copy and the
+  Contact us button under the bubble on desktop). They alternate by crop instead: a square photo in
+  a gold frame.
+- Contact links land the form above the bubble's band, the "keep account numbers out" note and the
+  call/email lines now sit above the form, and on phones there is room under the form so the bubble
+  never covers the footer.
+- The chat widget snippet and its welcome message are unchanged.

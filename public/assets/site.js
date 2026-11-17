@@ -60,13 +60,14 @@
   });
 
   /* Every Contact link (#contact) scrolls to the form on the page so the whole form is in view:
-     centred when it fits between the sticky header and the phone buttons, otherwise just under the header. */
+     centred between the sticky header and the band kept for the chat bubble, otherwise just under the header. */
   function scrollToForm(smooth) {
     var section = document.getElementById('contact');
     if (!section) return false;
     var target = section.querySelector('.form-embed') || section;
     var headerH = header ? header.offsetHeight : 0;
-    var bottomSpace = window.innerWidth < 1080 ? 100 : 0;
+    /* Keep the form clear of the bottom band where the chat widget's welcome bubble opens */
+    var bottomSpace = 205;
     var room = window.innerHeight - headerH - bottomSpace;
     var r = target.getBoundingClientRect();
     var gap = r.height < room ? (room - r.height) / 2 : 12;
