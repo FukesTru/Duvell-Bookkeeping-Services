@@ -3,7 +3,7 @@
     "name": "Duvell Bookkeeping Services",
     "known_as": "Duvell Bookkeeping Services",
     "legal_name": "Duvell Industries LLC",
-    "owner": "Antoni D. Sullivan",
+    "owner": "Antonio D. Sullivan",
     "street": "147-35 95th Ave",
     "city": "Jamaica",
     "state": "NY",
@@ -24,6 +24,10 @@
   },
   "hours": "Monday to Friday, 9 AM to 5 PM Eastern; Saturday and Sunday closed (taken from the current website, client to confirm)",
   "areas_served": [
+    "Jamaica, Queens, NY",
+    "Queens, NY",
+    "Brooklyn, NY",
+    "Nassau County, NY",
     "Remote, across the US"
   ],
   "primary_city": "New York, NY (based in Jamaica, Queens)",
@@ -74,38 +78,110 @@
     },
     {
       "file": "hero-bookkeeping-desk.jpg",
-      "note": "Illustrative (Higgsfield GPT Image 2.6). Desk with laptop, invoices folder and calculator by a window, plain wall on the left. Home hero background."
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on / (Home hero). A worn wooden desk by a window with a half-open laptop turned away, a folder of invoices, a calculator and a mug."
     },
     {
-      "file": "bookkeeper-at-work.jpg",
-      "note": "Illustrative. A bookkeeper seen over the shoulder at a laptop with receipts. Home bookkeeper section, Monthly bookkeeping, Accounts receivable. Never captioned as the owner."
+      "file": "home-bookkeeper-papers.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on / (\"A bookkeeper who actually knows your business\"). Receipts held by a binder clip beside an open notebook, a pen and a coffee mug on an oak table, brick building across the street."
     },
     {
-      "file": "financial-reports.jpg",
-      "note": "Illustrative. Printed reports with a binder clip, laptop and glasses. Services hero, Financial reporting, Cash flow reporting, About."
-    },
-    {
-      "file": "reconciliation.jpg",
-      "note": "Illustrative. Blurred bank statement and ledger with a hand making check marks. Account reconciliation, home Monthly Bookkeeping card."
-    },
-    {
-      "file": "payroll-support.jpg",
-      "note": "Illustrative. Back-office desk with laptop, envelopes and desk lamp. Payroll support, Accounts payable, home AP and AR card."
-    },
-    {
-      "file": "consultation.jpg",
-      "note": "Illustrative. A business owner and a bookkeeper reviewing papers, seen from behind. Home contact section, Contact page. Not the owner or a real client."
-    },
-    {
-      "file": "cleanup-catch-up.jpg",
-      "note": "Illustrative. Receipts sorted into folders and an accordion file. Bookkeeping cleanup, home Catch-Up card, Services, Pricing one-time projects."
+      "file": "home-contact-notes.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on / (Contact section). A phone lying face down next to a yellow legal pad and a pencil on a kitchen table in morning light."
     },
     {
       "file": "office-corner.jpg",
-      "note": "Illustrative. Quiet office corner with desk, window, binders and radiator. About, Pricing, Resources, Month-end close, Fixed asset tracking, home QuickBooks card."
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /about/ (Hero). A quiet office corner with a wooden desk under a tall window, grey binders on a shelf and a radiator."
+    },
+    {
+      "file": "about-solo-practice.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /about/ (\"Why work with a solo practice?\"). A closed manila folder, tortoiseshell glasses and a fountain pen on a dark wood desk, green banker's lamp behind."
+    },
+    {
+      "file": "consultation.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /contact/ (Hero). A small business owner in a cap and apron and a bookkeeper reviewing papers at a wooden table, seen from behind."
+    },
+    {
+      "file": "pricing-proposal.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /pricing/ (Hero). A one-page letter in a navy presentation folder with a silver pen on a walnut table."
+    },
+    {
+      "file": "pricing-one-time.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /pricing/ (One-Time Services). An accordion file beside a cardboard box of old receipts and envelopes on a wooden floor."
+    },
+    {
+      "file": "questions-notebook.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /resources/ (Hero). An open spiral notebook with a faint pencil list, a pencil and a paper cup of coffee on a cafe counter by a Queens street."
+    },
+    {
+      "file": "services-shelf.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/ (Hero). An office shelf of grey and navy box binders with blank spines and a trailing pothos in late-afternoon light."
+    },
+    {
+      "file": "services-file-boxes.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/ (\"Fixing the past\" card). Three white file boxes with blank labels beside a wooden desk, one open with folders, a radiator under the window."
+    },
+    {
+      "file": "svc-monthly-bookkeeping.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/bookkeeping/ (Hero). A wooden in-tray of sorted receipts beside a blank wall calendar on a cork board and a closed laptop."
+    },
+    {
+      "file": "cleanup-catch-up.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/bookkeeping-cleanup/ (Hero). A pile of receipts and invoices being sorted into manila folders and an accordion file."
+    },
+    {
+      "file": "reconciliation.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/account-reconciliation/ (Hero). A blurred bank statement and a ledger sheet with highlighter marks, a hand making check marks with a pencil."
+    },
+    {
+      "file": "svc-month-end-close.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/month-end-close/ (Hero). A tidy desk at dusk with a closed folder, a stapler and a lit lamp, Queens row houses outside."
+    },
+    {
+      "file": "svc-financial-reporting.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/financial-reporting/ (Hero). A stack of plain bound reports with blank covers on a meeting table with two coffee mugs and a pen."
+    },
+    {
+      "file": "svc-cash-flow.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/cash-flow-reporting/ (Hero). A canvas deposit bag, a desk calculator with a dark display and a notebook on a shop's back-office desk."
+    },
+    {
+      "file": "svc-accounts-receivable.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/accounts-receivable/ (Hero). A bakery back counter after closing with a carbon-copy invoice book, a pen and a cake box."
+    },
+    {
+      "file": "svc-accounts-payable.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/accounts-payable/ (Hero). Opened vendor envelopes and bills under a wooden letter tray with a brass letter opener."
+    },
+    {
+      "file": "svc-payroll.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/payroll-support/ (Hero). A cafe back room with staff aprons on hooks, a blank timesheet on a clipboard and a shelf of paper cups."
+    },
+    {
+      "file": "svc-fixed-assets.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /services/fixed-asset-tracking/ (Hero). A contractor's storage garage with tool cases on wire shelving, a ladder and a white van outside."
+    },
+    {
+      "file": "area-overview.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /service-areas/ (Hero). A golden-hour rooftop view across low-rise Queens with water towers and a hazy Manhattan skyline."
+    },
+    {
+      "file": "area-jamaica.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /service-areas/jamaica-queens-ny/ (Hero). A southeast Queens shopping street under an elevated train line, awnings without readable signs, distant shoppers."
+    },
+    {
+      "file": "area-queens.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /service-areas/queens-ny/ (Hero). A quiet Queens street of attached brick houses with small gardens, iron fences and autumn trees."
+    },
+    {
+      "file": "area-brooklyn.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /service-areas/brooklyn-ny/ (Hero). A tree-lined Brooklyn block of brownstone stoops with a bicycle locked to a railing."
+    },
+    {
+      "file": "area-nassau.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /service-areas/nassau-county-ny/ (Hero). A Long Island village main street with two-story brick shops, angled parking and a rail overpass."
     }
   ],
-  "images_note": "All photos are illustrative, generated with Higgsfield GPT Image 2.6; each has a 960px version (name-960.jpg). No real photo of the owner exists yet.",
+  "images_note": "Every photo is illustrative and used on one page only (tools/image-dupes.mjs). Each has a 960px version. No real photo of the owner exists yet.",
   "must_keep": "",
   "integrations": {
     "form_embed": "<iframe\n    src=\"https://api.leadconnectorhq.com/widget/form/P3fIlMHnjh2t0tnhACOz\"\n    style=\"width:100%;height:100%;border:none;border-radius:3px\"\n    id=\"inline-P3fIlMHnjh2t0tnhACOz\"\n    data-layout=\"{'id':'INLINE'}\"\n    data-trigger-type=\"alwaysShow\"\n    data-trigger-value=\"\"\n    data-form-name=\"Website Form (Duvell Bookkeeping Services)\"\n    data-height=\"483\"\n    data-layout-iframe-id=\"inline-P3fIlMHnjh2t0tnhACOz\"\n    data-form-id=\"P3fIlMHnjh2t0tnhACOz\"\n    title=\"Website Form (Duvell Bookkeeping Services)\"\n        >\n</iframe>\n<script src=\"https://link.msgsndr.com/js/form_embed.js\"></script>",

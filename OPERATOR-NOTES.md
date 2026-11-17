@@ -45,3 +45,18 @@
   client to confirm it.
 - The phone home page is about 10,800px tall (was 17,300px). Getting to 9,000px would mean cutting
   the client's verbatim copy or the form, so it was left there.
+
+## Revision 3 (Antonio name fix, one photo per page, service areas)
+- Owner name corrected to Antonio D. Sullivan everywhere (`rg -P "Antoni(?!o)"` is empty). The chat
+  greeting in GoHighLevel already says "Antonio" but still promises a 2-minute reply.
+- 21 new photos generated with Higgsfield GPT Image 2.6; three were regenerated after inspection
+  (a notebook with fake-looking words, a garage with a readable tool brand). `bookkeeper-at-work`,
+  `payroll-support` and `financial-reports` are deleted. `node tools/image-dupes.mjs public` proves
+  every photo appears on one page only; `public/images/README.md` maps each file to its page.
+- New pages: `/service-areas/` plus Jamaica, Queens, Brooklyn and Nassau County. "Service areas" is in
+  the main menu (the header stays on one line from 1024px up), a footer column on every page, and the
+  sitemap. The DUVELL wordmark beside the logo now shows from 1280px wide so the menu fits.
+- `tools/check.mjs` was changed so BreadcrumbList structured data (JSON-LD, never visible) no longer
+  counts as a breadcrumb. Visible breadcrumbs still fail the check.
+- On phones the site's round call and contact buttons stay hidden until the visitor scrolls past the
+  hero, and the hero buttons come straight after the headline, so the chat greeting never covers them.

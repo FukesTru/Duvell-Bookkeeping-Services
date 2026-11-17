@@ -5,7 +5,7 @@ Duvell Bookkeeping Services (legal name Duvell Industries LLC) is a bookkeeping 
 services business built by Strain Systems. Wherever MASTER-PROMPT.md or BRIEF.md says attorney,
 law firm, practice areas or legal, read it for a bookkeeping firm instead:
 - "Practice areas" become **Services** (`/services/` overview + one page per service from the CSV).
-- The owner, Antoni D Sullivan, is the business owner, not an attorney. No "Attorney advertising"
+- The owner, Antonio D Sullivan, is the business owner, not an attorney. No "Attorney advertising"
   line, no bar admissions, no LegalService/Attorney schema (use AccountingService / LocalBusiness).
 - Keep the honesty rules: no invented credentials (never "CPA", "certified", "licensed", "expert"
   unless the CSV or the current site states it), no guaranteed savings or refunds, no fake reviews,

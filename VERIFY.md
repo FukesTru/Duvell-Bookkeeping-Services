@@ -6,7 +6,7 @@ website (duvellbookkeeping.com), we say so.
 
 ## Part A. Information we still need from you
 
-1. **A photo of you.** The site has no photo of Antoni yet. A clear, well-lit head and shoulders photo
+1. **A photo of you.** The site has no photo of Antonio yet. A clear, well-lit head and shoulders photo
    would go on the About page and the home page. (The photo labelled "Owner" on your current website
    was not used, because we could not confirm it is a real photo.)
 2. **Your logo as an original file.** We took the logo from your current website (a small JPEG on
@@ -31,8 +31,8 @@ website (duvellbookkeeping.com), we say so.
 ## Part B. Facts to confirm
 
 ### Every page
-- **Your name.** Your form says "Antoni D Sullivan". Your current website says "Antonio Sullivan".
-  We used **Antoni D. Sullivan**. Which spelling is correct?
+- **Your name.** Resolved: **Antonio D. Sullivan** (Antonio, confirmed by the agency). The spelling in
+  the onboarding form was a typo and has been corrected everywhere.
 - **Phone number.** Your form says 800-380-1976. Your current website shows 1 (888) 380-1976. We used
   **(800) 380-1976** everywhere. Which number is right?
 - **Email.** We used **info@duvellbookkeeping.com** (from your form). Your current contact page also
@@ -108,6 +108,16 @@ website (duvellbookkeeping.com), we say so.
   the consultation.
 - **Fixed asset tracking:** priced as an add-on to monthly bookkeeping. The site says the tax
   preparer decides tax depreciation.
+
+### Service area pages (new)
+- Pages for Jamaica (Queens), Queens, Brooklyn and Nassau County, plus an overview. None of them
+  claims existing clients in those areas.
+- In-person meetings near Jamaica, Queens, are offered "on request". Please confirm you are happy
+  to meet clients in person, and whether that includes Nassau County.
+- The Queens page says businesses inside New York City can owe city business taxes (for example
+  the Unincorporated Business Tax) on top of state taxes. The Nassau page says city business taxes
+  do not apply there and sales tax rates differ. Both say this is general information, not tax
+  advice. Please check you are comfortable with that wording.
 
 ### Privacy policy and terms of use
 - Your current website has neither, so we wrote both. The privacy policy says you may contact people

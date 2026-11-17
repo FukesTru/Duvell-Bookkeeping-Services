@@ -87,6 +87,16 @@
     window.addEventListener('load', function () { window.setTimeout(function () { scrollToForm(false); }, 600); });
   }
 
+  /* On phones the round call and contact buttons stay hidden until the visitor scrolls past the hero,
+     so they never cover the hero's own buttons on first load. */
+  var hero = document.querySelector('.home-hero, .page-hero');
+  if (hero && 'IntersectionObserver' in window) {
+    body.classList.add('fab-wait');
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { body.classList.toggle('fab-wait', entry.isIntersecting); });
+    }, { rootMargin: '0px 0px -40% 0px' }).observe(hero);
+  }
+
   /* Mark the menu link for the page you are on */
   var here = window.location.pathname;
   document.querySelectorAll('.nav-list a').forEach(function (a) {
