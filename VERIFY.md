@@ -14,9 +14,9 @@ website (duvellbookkeeping.com), we say so.
    large PNG with a transparent background), please send it. A version that works on white
    backgrounds would also help.
 3. **Text messages.** Can (800) 380-1976 receive text messages? If yes, we will add "Text us" links.
-4. **Business tax preparation.** Your current website offers business tax preparation (Schedule C,
-   LLCs, S-Corps, C-Corps). Your form did not list it, so the new site does not mention it as a
-   service. Should it be added?
+4. **Business tax preparation.** The Pricing page now lists business tax preparation (Schedule C,
+   single-member and multi-member LLCs, S-Corporations, C-Corporations), copied from your current
+   website. Your onboarding form did not list it. Please confirm you still offer it.
 5. **Client reviews.** The site has no reviews or testimonials. If you have reviews that clients
    have agreed you can use, send them word for word with the name exactly as it should appear.
 6. **Free guides.** Your current Resources page offers 4 PDF guides. All 4 download links currently
@@ -57,6 +57,10 @@ website (duvellbookkeeping.com), we say so.
   office. The Terms page says so.
 
 ### Home page
+- The tagline "Bringing order to financial chaos" and the headline "Financial chaos in. Clean books
+  out." The wording around them is from your current website.
+- "Reports delivered on schedule" and "Real answers from a real person, usually same business day."
+  (From your current website. Please confirm both are still true.)
 - A free 30-minute consultation by phone or video. (From your current website.)
 - No long-term contracts on monthly bookkeeping. (From your current website.)
 - Every proposal gives the scope, the timing and a flat price in writing. (From your current website.)
@@ -76,10 +80,11 @@ website (duvellbookkeeping.com), we say so.
 - Local clients near Jamaica, Queens, can ask to meet in person.
 
 ### Pricing page
-- 3 monthly packages (Starter, Growth, Premium) with the features listed on your current website.
-  Growth adds a monthly review call. Premium adds a custom reporting package, month-end close, cash
-  flow and key number tracking, and direct owner access.
-- One-time projects: QuickBooks setup, cleanup or catch-up, and multi-year cleanup.
+- The Starter, Growth and Premium packages, the one-time services and the tax preparation list
+  are copied word for word from your current website. No prices are shown; every item says
+  "Request a Custom Proposal".
+- Growth is labelled "Most popular" and promises "faster turnaround", as on your current website.
+- "Every reconciliation, every report, and every tax return is reviewed by the owner."
 - Clients can move to a different package later.
 
 ### Contact page
@@ -114,4 +119,3 @@ website (duvellbookkeeping.com), we say so.
 - **Town pages:** you serve clients remotely, so there are no separate town pages.
 - **Booking calendar:** your current site books calls through Calendly. The new site sends people
   to the phone number and the contact form instead.
-- **Tax preparation:** not in your form (Part A, item 4).

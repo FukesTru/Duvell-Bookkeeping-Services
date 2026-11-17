@@ -29,3 +29,19 @@
 - Pages: 19 (home, services overview, 10 service pages, about, pricing, questions, contact, privacy,
   terms, 404).
 - `site.json` brand values come from the logo and current website because the form left them blank.
+
+## Revision (bold headlines, natural images, old-site home page, verbatim pricing)
+- All 8 photos were regenerated with Higgsfield GPT Image 2.6 (high, 2K, 16:9) and replaced the
+  earlier set everywhere. The reconciliation photo was regenerated once because the first version had
+  pseudo-readable numbers and fake handwriting. See `public/images/README.md`.
+- The environment `duvell-bookkeeping-services` now also allows `d8j0ntlcm91z4.cloudfront.net`
+  (Higgsfield's image host) so generated images can be downloaded.
+- Old-site copy is used word for word, except that its em dashes were turned into commas or full
+  stops, because `tools/check.mjs` fails any page with an em or en dash.
+- The "Prefer to talk it through?" band was in the shared footer, so removing it from the home page
+  removed it from every page (the footer must be identical everywhere). Phone, email and the form
+  stay in each page's #contact section.
+- Business tax preparation is now shown on the Pricing page (old-site content), so VERIFY.md asks the
+  client to confirm it.
+- The phone home page is about 10,800px tall (was 17,300px). Getting to 9,000px would mean cutting
+  the client's verbatim copy or the form, so it was left there.

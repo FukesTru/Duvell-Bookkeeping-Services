@@ -1,20 +1,18 @@
 # Duvell Bookkeeping Services website images
 
-AI-generated illustrative photographs for the Duvell Bookkeeping Services website. They are not photos of the business owner, staff, clients, or the firm's actual office.
-
-Generated with the Higgsfield connector, model **GPT Image 2.6** (quality: high, resolution: 2K, 16:9). Web files below were resized to a maximum width of 1920px and compressed as JPEG under ~400KB. Original 2688×1520 downloads are in `raw/`.
+All photographs are illustrative, generated with Higgsfield GPT Image 2.6 (quality high, 2K, 16:9).
+They do not show Antoni D. Sullivan, his office, staff or clients, and must never be captioned that way.
+Each photo is a 1920px JPEG (under 400 KB) with a 960px version named `<name>-960.jpg` for phones.
 
 | File | Use | What it shows |
 | --- | --- | --- |
-| `hero-office-desk.jpg` | Home hero (16:9, 1920×1086, 294 KB) | A sunlit oak desk with an open laptop showing soft unlabelled charts, a coffee cup, stacked reports, a plant, and a New York style brick building with a fire escape outside the window. No people. |
-| `bookkeeping-services.jpg` | Bookkeeping services (1920×1086, 270 KB) | A generic person's hands (no face) writing in a grid ledger and holding a receipt, with a calculator and a laptop in the background. A few receipts have faint unreadable print, not legible text or logos. |
-| `financial-reporting.jpg` | Financial reporting (1920×1086, 242 KB) | A laptop and a second monitor showing colorful abstract charts with no readable labels, plus out-of-focus printed reports, a coffee cup, and warm window light. No people. |
-| `account-reconciliation.jpg` | Account reconciliation (1920×1086, 258 KB) | Generic hands (no face) comparing two stacks of highlighted spreadsheet printouts, with a calculator, yellow highlighter, and pencil on the desk. Cell grids are visible; numbers and labels are not readable. |
-| `payroll-support.jpg` | Payroll support (1920×1086, 271 KB) | A calm desk with a laptop (blurred screen), a closed notebook, plain folders and envelopes, an analog clock, and a plant in afternoon light. No people and no readable text. |
-| `remote-consultation.jpg` | Remote consultation (1920×1086, 268 KB) | Over-the-shoulder view of a generic person (face not shown) on a video call; the laptop screen is a soft blur with no recognizable faces or UI text. Warm home-office setting. |
-| `organized-documents.jpg` | Organized documents / cleanup mood (1920×1086, 354 KB) | A tidy still life of cloth-bound binders, file folders in a wooden tray, stacked notebooks, eyeglasses, and a plant on a sunlit oak desk. No people and no visible text. |
-| `bookkeeping-cleanup.jpg` | Bookkeeping cleanup (1920×1086, 241 KB) | Generic hands (no face) sorting a loose pile of receipts into neat stacks and a wooden tray, with a laptop out of focus in the background. Receipt print is faint and not legible. |
+| `hero-bookkeeping-desk.jpg` | Home hero, full-bleed background | A worn light-wood desk with a half-open laptop, a manila folder of invoices, a calculator, a mug and a pen; a bookshelf with a plant and a curtained window behind; a plain wall on the left. No people. |
+| `bookkeeper-at-work.jpg` | Home "A bookkeeper who actually knows your business", Monthly bookkeeping, Accounts receivable | Over-the-shoulder view of a bookkeeper (face not shown) at a laptop with a blurred spreadsheet, one hand on the trackpad, the other on a stack of receipts. |
+| `financial-reports.jpg` | Services hero, Financial reporting, Cash flow reporting, About | Printed reports with soft unreadable charts held by a binder clip, beside a laptop and tortoiseshell glasses on a wooden desk. No people. |
+| `reconciliation.jpg` | Account reconciliation, home "Monthly Bookkeeping" card | A blurred bank statement and a ledger sheet with highlighter marks, and a hand making check marks with a pencil. Face not shown. |
+| `payroll-support.jpg` | Payroll support, Accounts payable, home "AP and AR" card | A back-office desk with a laptop, a stack of white envelopes, a blank wall calendar and a lit desk lamp. No people. |
+| `consultation.jpg` | Home contact section, Contact page | A small business owner in a cap and apron and a bookkeeper reviewing papers and a laptop at a wooden table, seen from behind. Not the owner of this business. |
+| `cleanup-catch-up.jpg` | Bookkeeping cleanup, home "Catch-Up" card, Services "Fixing the past", Pricing one-time projects | A messy pile of receipts and invoices being sorted into manila folders and an accordion file. No people. |
+| `office-corner.jpg` | About, Pricing and Resources headers, Month-end close, Fixed asset tracking, home "QuickBooks Setup" card | A quiet office corner with a wooden desk under a tall window, a closed laptop, grey binders on a shelf and a radiator. No people. |
 
-## Failures
-
-The first batch of eight hit a temporary GPT Image rate limit on four of the jobs (bookkeeping services, reconciliation, payroll, and organized documents). Those four were retried a few minutes later and all completed successfully. No images failed in the end.
+Logo files (`logo-icon.png`, `logo-duvell-industries-transparent.png`) come from the client's current website with the black background removed.

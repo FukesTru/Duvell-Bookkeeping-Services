@@ -73,39 +73,39 @@
       "note": "The circular gold D emblem with white DUVELL, without the INDUSTRIES LLC line, transparent background. Header, intro animation, favicon. Only use on navy."
     },
     {
-      "file": "hero-office-desk.jpg",
-      "note": "AI-generated illustration (Higgsfield). Sunlit desk, laptop with charts, brick building outside. Home hero, financial reporting. Never presented as the real office."
+      "file": "hero-bookkeeping-desk.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Desk with laptop, invoices folder and calculator by a window, plain wall on the left. Home hero background."
     },
     {
-      "file": "bookkeeping-services.jpg",
-      "note": "AI-generated illustration (Higgsfield). Hands writing in a ledger, calculator, receipts. Monthly bookkeeping, payroll support. Not the owner."
+      "file": "bookkeeper-at-work.jpg",
+      "note": "Illustrative. A bookkeeper seen over the shoulder at a laptop with receipts. Home bookkeeper section, Monthly bookkeeping, Accounts receivable. Never captioned as the owner."
     },
     {
-      "file": "bookkeeping-cleanup.jpg",
-      "note": "AI-generated illustration (Higgsfield). Hands sorting receipts into stacks. Bookkeeping cleanup. Not the owner or a client."
+      "file": "financial-reports.jpg",
+      "note": "Illustrative. Printed reports with a binder clip, laptop and glasses. Services hero, Financial reporting, Cash flow reporting, About."
     },
     {
-      "file": "financial-reporting.jpg",
-      "note": "AI-generated illustration (Higgsfield). Laptop and monitor with abstract charts. Services overview, financial reporting."
-    },
-    {
-      "file": "account-reconciliation.jpg",
-      "note": "AI-generated illustration (Higgsfield). Hands comparing highlighted printouts. Account reconciliation."
+      "file": "reconciliation.jpg",
+      "note": "Illustrative. Blurred bank statement and ledger with a hand making check marks. Account reconciliation, home Monthly Bookkeeping card."
     },
     {
       "file": "payroll-support.jpg",
-      "note": "AI-generated illustration (Higgsfield). Desk with laptop, folders, envelopes and clock. Payroll support."
+      "note": "Illustrative. Back-office desk with laptop, envelopes and desk lamp. Payroll support, Accounts payable, home AP and AR card."
     },
     {
-      "file": "remote-consultation.jpg",
-      "note": "AI-generated illustration (Higgsfield). Person seen from behind on a video call. Home steps section, contact page. Never presented as the owner or a client."
+      "file": "consultation.jpg",
+      "note": "Illustrative. A business owner and a bookkeeper reviewing papers, seen from behind. Home contact section, Contact page. Not the owner or a real client."
     },
     {
-      "file": "organized-documents.jpg",
-      "note": "AI-generated illustration (Higgsfield). Binders and folders on a sunlit desk. About, monthly bookkeeping, month-end close."
+      "file": "cleanup-catch-up.jpg",
+      "note": "Illustrative. Receipts sorted into folders and an accordion file. Bookkeeping cleanup, home Catch-Up card, Services, Pricing one-time projects."
+    },
+    {
+      "file": "office-corner.jpg",
+      "note": "Illustrative. Quiet office corner with desk, window, binders and radiator. About, Pricing, Resources, Month-end close, Fixed asset tracking, home QuickBooks card."
     }
   ],
-  "images_note": "Each photo also has a 960px version (name-960.jpg) for phones. No real photo of the owner exists yet. The current website shows a photo labelled Owner; it was not used because it could not be confirmed as a real photo.",
+  "images_note": "All photos are illustrative, generated with Higgsfield GPT Image 2.6; each has a 960px version (name-960.jpg). No real photo of the owner exists yet.",
   "must_keep": "",
   "integrations": {
     "form_embed": "<iframe\n    src=\"https://api.leadconnectorhq.com/widget/form/P3fIlMHnjh2t0tnhACOz\"\n    style=\"width:100%;height:100%;border:none;border-radius:3px\"\n    id=\"inline-P3fIlMHnjh2t0tnhACOz\"\n    data-layout=\"{'id':'INLINE'}\"\n    data-trigger-type=\"alwaysShow\"\n    data-trigger-value=\"\"\n    data-form-name=\"Website Form (Duvell Bookkeeping Services)\"\n    data-height=\"483\"\n    data-layout-iframe-id=\"inline-P3fIlMHnjh2t0tnhACOz\"\n    data-form-id=\"P3fIlMHnjh2t0tnhACOz\"\n    title=\"Website Form (Duvell Bookkeeping Services)\"\n        >\n</iframe>\n<script src=\"https://link.msgsndr.com/js/form_embed.js\"></script>",
