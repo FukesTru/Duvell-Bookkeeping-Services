@@ -182,6 +182,10 @@
     {
       "file": "area-nassau.jpg",
       "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /service-areas/nassau-county-ny/ (Hero). A Long Island village main street with two-story brick shops, angled parking and a rail overpass."
+    },
+    {
+      "file": "remote-services.jpg",
+      "note": "Illustrative (Higgsfield GPT Image 2.6). Only on /remote-services/ (Hero). A calm home-office desk by a window with a closed laptop, a phone face down, a mug of tea, a potted plant and manila folders."
     }
   ],
   "images_note": "Every photo is illustrative and used on one page only (tools/image-dupes.mjs). Each has a 960px version. No real photo of the owner exists yet.",

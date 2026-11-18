@@ -33,5 +33,6 @@ Every photo is used on exactly one page. `node tools/image-dupes.mjs public` che
 | `area-queens.jpg` | `/service-areas/queens-ny/` | Hero | A quiet Queens street of attached brick houses with small gardens, iron fences and autumn trees. |
 | `area-brooklyn.jpg` | `/service-areas/brooklyn-ny/` | Hero | A tree-lined Brooklyn block of brownstone stoops with a bicycle locked to a railing. |
 | `area-nassau.jpg` | `/service-areas/nassau-county-ny/` | Hero | A Long Island village main street with two-story brick shops, angled parking and a rail overpass. |
+| `remote-services.jpg` | `/remote-services/` | Hero | A calm home-office desk by a window with sheer curtains: a closed laptop, a phone face down, a mug of tea, a potted plant and manila folders, a brick building with a fire escape outside. |
 
 Logo files (`logo-icon.png`, `logo-duvell-industries-transparent.png`) come from the client's current website with the black background removed.

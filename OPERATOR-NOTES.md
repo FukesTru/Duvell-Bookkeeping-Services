@@ -106,3 +106,25 @@
   either on first load or after pressing a Contact button.
 - Content, photos, the dropdowns, the form embed and the chat snippet are unchanged. Only
   `public/assets/site.css` changed.
+
+## Revision 5 (Remote services page, taller form)
+- New page `/remote-services/`: hero ("Any state. Same clean books.", call and contact buttons, new
+  photo), how remote work runs in 4 steps, every service available in every state, in person on
+  request in Jamaica, 7 questions, and the contact section with the same inline form. Every fact and
+  answer comes from the existing pages or the current site ("Remote nationwide, in person locally").
+  No prices.
+- "Remote services" is the last item in the Service areas dropdown (desktop and phone menu) and in
+  the footer's service areas list on every page. On `/service-areas/` it is linked from "What about
+  the rest of New York City and the US?" and from the "Remote across the US" fact. It is in the
+  sitemap; every page's sitemap date is now 2026-11-18 because every header and footer changed.
+- `remote-services.jpg` (plus the 960px version) was generated with Higgsfield GPT Image 2.6: a home
+  office desk with a closed laptop and a phone face down, no people. It is used on this page only.
+- The GoHighLevel form now has two consent checkboxes, so it is taller. Each page with the form now
+  keeps the form frame at least as tall as the form at that screen width, measured on the live form
+  (845px on wide screens up to 1120px on a 320px phone), so the form never scrolls inside its frame,
+  even before GoHighLevel's script sizes it. On a phone the form is taller than the screen, so
+  visitors scroll the page to reach the boxes and the button.
+- The chat widget's pop-up message still opens over the right end of the second consent text when a
+  Contact button lands on the form on a 1440 x 900 desktop, and over the consent boxes on phones,
+  until the visitor closes it. The site cannot move it; turning the pop-up message off in GoHighLevel
+  (item 2 at the top) solves it.
