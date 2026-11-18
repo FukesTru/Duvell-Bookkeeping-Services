@@ -73,3 +73,18 @@
   call/email lines now sit above the form, and on phones there is room under the form so the bubble
   never covers the footer.
 - The chat widget snippet and its welcome message are unchanged.
+
+## Revision 4 (Service areas dropdown, restyle)
+- "Service areas" in the header is now a dropdown like Services on every page (overview, Jamaica,
+  Queens, Brooklyn, Nassau County). Desktop: opens on hover, click and keyboard focus; Enter or Space
+  toggles; Escape closes and returns focus. Phone menu: an accordion. The chat widget is hidden while
+  the phone menu is open.
+- The desktop navigation now starts at 1240px wide (the full bar, wordmark included, fits on one line
+  from there); below that the hamburger menu and the round phone buttons are used.
+- Restyle: white sticky header, League Spartan headings (self-hosted, OFL licence in
+  public/assets/fonts), cool mist bands, white headlines on navy, gold only as an accent, plain photo
+  frames, white cards with hairlines, split section layouts on desktop, deeper navy footer. The circular
+  logo mark sits on a small navy disc in the white header so its white lettering stays visible.
+- Content, URLs, pricing wording, photos, the form embed and the chat snippet are unchanged. The
+  chat-bubble clearance from revision 3b is kept (210px band on phones, 200px on desktop).
+- The contact section is always on a mist band; bands above it alternate white and mist.

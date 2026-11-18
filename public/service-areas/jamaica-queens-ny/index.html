@@ -35,7 +35,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="/" aria-label="Duvell Bookkeeping Services, home page">
-      <img src="/images/logo-icon.png" alt="Duvell logo, a gold letter D in a circle" width="58" height="55">
+      <span class="brand-mark"><img src="/images/logo-icon.png" alt="Duvell logo, a gold letter D in a circle" width="58" height="55"></span>
       <span class="brand-text"><span class="brand-name">Duvell</span><span class="brand-sub">Bookkeeping Services</span></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
@@ -44,23 +44,32 @@
         <li><a href="/">Home</a></li>
         <li class="has-dropdown">
           <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">Services<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <ul class="dropdown-menu" id="services-menu">
-          <li><a href="/services/bookkeeping/">Monthly bookkeeping</a></li>
-          <li><a href="/services/bookkeeping-cleanup/">Bookkeeping cleanup</a></li>
-          <li><a href="/services/account-reconciliation/">Account reconciliation</a></li>
-          <li><a href="/services/month-end-close/">Month-end close</a></li>
-          <li><a href="/services/financial-reporting/">Financial reporting</a></li>
-          <li><a href="/services/cash-flow-reporting/">Cash flow reporting</a></li>
-          <li><a href="/services/accounts-receivable/">Accounts receivable</a></li>
-          <li><a href="/services/accounts-payable/">Accounts payable</a></li>
-          <li><a href="/services/payroll-support/">Payroll support</a></li>
-          <li><a href="/services/fixed-asset-tracking/">Fixed asset tracking</a></li>
-          <li class="all-link"><a href="/services/">All services</a></li>
+          <ul class="dropdown-menu dropdown-wide" id="services-menu">
+            <li><a href="/services/bookkeeping/">Monthly bookkeeping</a></li>
+            <li><a href="/services/bookkeeping-cleanup/">Bookkeeping cleanup</a></li>
+            <li><a href="/services/account-reconciliation/">Account reconciliation</a></li>
+            <li><a href="/services/month-end-close/">Month-end close</a></li>
+            <li><a href="/services/financial-reporting/">Financial reporting</a></li>
+            <li><a href="/services/cash-flow-reporting/">Cash flow reporting</a></li>
+            <li><a href="/services/accounts-receivable/">Accounts receivable</a></li>
+            <li><a href="/services/accounts-payable/">Accounts payable</a></li>
+            <li><a href="/services/payroll-support/">Payroll support</a></li>
+            <li><a href="/services/fixed-asset-tracking/">Fixed asset tracking</a></li>
+            <li class="all-link"><a href="/services/">All services</a></li>
           </ul>
         </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/pricing/">Pricing</a></li>
-        <li><a href="/service-areas/">Service areas</a></li>
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="areas-menu">Service areas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <ul class="dropdown-menu" id="areas-menu">
+            <li class="overview-link"><a href="/service-areas/">Service areas overview</a></li>
+            <li><a href="/service-areas/jamaica-queens-ny/">Jamaica</a></li>
+            <li><a href="/service-areas/queens-ny/">Queens</a></li>
+            <li><a href="/service-areas/brooklyn-ny/">Brooklyn</a></li>
+            <li><a href="/service-areas/nassau-county-ny/">Nassau County</a></li>
+          </ul>
+        </li>
         <li><a href="/resources/">Questions</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
@@ -71,7 +80,7 @@
     </nav>
     <div class="header-actions">
       <a class="header-phone" href="tel:+18003801976"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(800) 380-1976</a>
-      <a class="btn btn-primary btn-on-navy" href="#contact">Contact us</a>
+      <a class="btn btn-primary btn-header" href="#contact">Contact us</a>
     </div>
   </div>
 </header>

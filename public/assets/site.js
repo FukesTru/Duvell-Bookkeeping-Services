@@ -1,4 +1,4 @@
-/* Duvell Bookkeeping Services: menu, services dropdown, contact links and scroll movement.
+/* Duvell Bookkeeping Services: menu, dropdowns, contact links and scroll movement.
    Everything on the site still reads and works with this script switched off. */
 (function () {
   var d = document.documentElement;
@@ -27,36 +27,76 @@
       setMenu(!body.classList.contains('menu-open'));
     });
   }
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      if (body.classList.contains('menu-open')) {
-        setMenu(false);
-        if (toggle) toggle.focus();
-      }
-      closeDropdowns();
-    }
-  });
   window.addEventListener('resize', function () {
-    if (window.innerWidth >= 1080 && body.classList.contains('menu-open')) setMenu(false);
+    if (desk.matches && body.classList.contains('menu-open')) setMenu(false);
   });
 
-  /* Services dropdown */
-  var dropToggles = document.querySelectorAll('.dropdown-toggle');
-  function closeDropdowns(except) {
-    dropToggles.forEach(function (b) {
-      if (b !== except) b.setAttribute('aria-expanded', 'false');
-    });
+  /* Dropdowns (Services, Service areas).
+     Desktop: open on hover, on click and while focus is inside; Enter or Space on the button toggles;
+     Escape closes and returns focus to the button. Phone menu: each button opens an accordion.
+     aria-expanded always matches what is shown, because the CSS shows a panel only from it. */
+  var desk = window.matchMedia('(min-width: 1240px)');
+  var drops = Array.prototype.slice.call(document.querySelectorAll('.has-dropdown'));
+  var suppressFocusOpen = false;
+  function setDrop(li, open) {
+    var b = li.querySelector('.dropdown-toggle');
+    if (b) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (!open) li._hoverOpen = false;
   }
-  dropToggles.forEach(function (b) {
-    b.addEventListener('click', function (e) {
+  function closeDropdowns(except) {
+    drops.forEach(function (li) { if (li !== except) setDrop(li, false); });
+  }
+  drops.forEach(function (li) {
+    var btn = li.querySelector('.dropdown-toggle');
+    if (!btn) return;
+    var pointer = false;
+    btn.addEventListener('pointerdown', function () { pointer = true; });
+    btn.addEventListener('click', function (e) {
       e.stopPropagation();
-      var open = b.getAttribute('aria-expanded') === 'true';
-      closeDropdowns(b);
-      b.setAttribute('aria-expanded', open ? 'false' : 'true');
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      closeDropdowns(li);
+      if (open && li._hoverOpen && desk.matches) { li._hoverOpen = false; pointer = false; return; }
+      setDrop(li, !open);
+      pointer = false;
+    });
+    li.addEventListener('mouseenter', function () {
+      if (!desk.matches) return;
+      closeDropdowns(li);
+      if (btn.getAttribute('aria-expanded') !== 'true') { setDrop(li, true); li._hoverOpen = true; }
+    });
+    li.addEventListener('mouseleave', function () {
+      if (!desk.matches) return;
+      if (li._hoverOpen || !li.contains(document.activeElement)) setDrop(li, false);
+    });
+    li.addEventListener('focusin', function () {
+      if (!desk.matches || suppressFocusOpen) return;
+      if (pointer) return;
+      closeDropdowns(li);
+      setDrop(li, true);
+    });
+    li.addEventListener('focusout', function (e) {
+      if (!desk.matches) return;
+      if (!e.relatedTarget || !li.contains(e.relatedTarget)) setDrop(li, false);
+    });
+    li.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' || btn.getAttribute('aria-expanded') !== 'true') return;
+      e.stopPropagation();
+      setDrop(li, false);
+      suppressFocusOpen = true;
+      btn.focus();
+      suppressFocusOpen = false;
     });
   });
   document.addEventListener('click', function (e) {
     if (!e.target.closest || !e.target.closest('.has-dropdown')) closeDropdowns();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    closeDropdowns();
+    if (body.classList.contains('menu-open')) {
+      setMenu(false);
+      if (toggle) toggle.focus();
+    }
   });
 
   /* Every Contact link (#contact) scrolls to the form on the page so the whole form is in view:
@@ -101,7 +141,11 @@
   /* Mark the menu link for the page you are on */
   var here = window.location.pathname;
   document.querySelectorAll('.nav-list a').forEach(function (a) {
-    if (a.getAttribute('href') === here) a.setAttribute('aria-current', 'page');
+    if (a.getAttribute('href') === here) {
+      a.setAttribute('aria-current', 'page');
+      var parent = a.closest('.has-dropdown');
+      if (parent) parent.classList.add('has-current');
+    }
   });
 
   /* Sections settle into place as they come into view */
@@ -120,9 +164,26 @@
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
   var vh = window.innerHeight;
+  var pending = [];
   items.forEach(function (el) {
     var r = el.getBoundingClientRect();
     if (r.top < vh * 0.95) el.classList.add('is-in');
-    else io.observe(el);
+    else { io.observe(el); pending.push(el); }
   });
+  /* Anything the page has already scrolled past is shown too, even after a jump, and it stays shown,
+     so no section is ever left blank. */
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking || !pending.length) return;
+    ticking = true;
+    window.requestAnimationFrame(function () {
+      ticking = false;
+      var limit = window.innerHeight;
+      var atEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+      pending = pending.filter(function (el) {
+        if (atEnd || el.getBoundingClientRect().top < limit) { el.classList.add('is-in'); io.unobserve(el); return false; }
+        return true;
+      });
+    });
+  }, { passive: true });
 })();

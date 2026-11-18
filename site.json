@@ -60,12 +60,15 @@
     "colour_main": "#051531",
     "colour_accent": "#DDB049",
     "colours_other": [
-      "#F7F3EC",
+      "#F4F8FB",
+      "#DBE5EE",
+      "#10212F",
+      "#4A5B6A",
       "#7C5A10",
-      "#0A1F44"
+      "#030E24"
     ],
-    "font": "Playfair Display (headings) and Inter (body), self-hosted in public/assets/fonts",
-    "notes": "Client left colours and fonts blank. Navy #051531 and gold #DDB049 taken from the logo and the current website. #F7F3EC is the ivory tinted band, #7C5A10 is the text-safe gold on light backgrounds, #0A1F44 is the lighter navy for cards on navy. Fonts match the current website."
+    "font": "League Spartan (headings), Inter (body, nav, buttons, forms), Playfair Display (DUVELL wordmark only); all self-hosted in public/assets/fonts",
+    "notes": "Client left colours and fonts blank. Navy #051531 and gold #DDB049 taken from the logo and the current website. #F7F3EC is the ivory tinted band, #7C5A10 is the text-safe gold on light backgrounds, #0A1F44 is the lighter navy for cards on navy. Revision 4: cool mist bands #F4F8FB, hairlines #DBE5EE, ink #10212F, muted #4A5B6A, deeper navy footer #030E24. Gold is an accent only (eyebrows, title rule, icons, Contact buttons); headlines on navy are white."
   },
   "images": [
     {
