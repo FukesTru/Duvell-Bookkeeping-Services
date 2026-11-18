@@ -88,3 +88,21 @@
 - Content, URLs, pricing wording, photos, the form embed and the chat snippet are unchanged. The
   chat-bubble clearance from revision 3b is kept (210px band on phones, 200px on desktop).
 - The contact section is always on a mist band; bands above it alternate white and mist.
+
+## Revision 4b (heroes hug their content)
+- Desktop (960px and wider): the empty navy band under every hero is gone. Heroes no longer fill the
+  screen; the space under the buttons and photo equals the space above (96px at 1280 and 1440, 104px
+  on the home page, 72 to 80px at 1024). The copy is centred against the photo beside it. The photo
+  is 320 to 560px tall, depending on the screen height, so the next section starts at about the fold
+  and its text stays clear of the chat greeting in the bottom-right corner.
+- No full-width chat band is left on desktop. Clearance only where the greeting actually sits: the
+  privacy and terms text lines up on the left, and on the 404 page at 960 to 1079px wide the two
+  link lists stack.
+- Phones: a hero with a photo runs the photo down to the fold, so the greeting opens over the photo.
+  The privacy, terms and 404 heroes have no photo, so their text is centred between the header and
+  the greeting, with even space above and below it (about 110 to 140px on a 390 x 844 phone) rather
+  than one band at the bottom.
+- Checked at 1440, 1280, 1024 and 390 wide on all 24 pages: the greeting covers no copy or buttons,
+  either on first load or after pressing a Contact button.
+- Content, photos, the dropdowns, the form embed and the chat snippet are unchanged. Only
+  `public/assets/site.css` changed.

@@ -265,13 +265,16 @@ body.menu-open chat-widget { display: none !important; }
 /* Heroes and the chat bubble.
    The chat widget's welcome bubble opens over the bottom-right of the screen: on a phone it covers
    the bottom 200px across nearly the full width, on desktop the bottom 200px of the right 330px.
-   Phone and tablet (under 960px): .hero-first fills the first screen and ends in an empty band
-   (--chat-zone) where the bubble opens. Eyebrow, headline, buttons and photo sit above it; the rest
-   of the hero (.hero-rest) follows below the first screen.
-   Desktop: the hero reaches the bottom of the first screen, copy sits on the left and the photo on
-   the right stops above the band, so the bottom-right corner holds nothing but hero background. */
+   Phone and tablet (under 960px): .hero-first fills the first screen. Eyebrow, headline and buttons
+   sit above the bottom --chat-zone; on heroes with a photo the photo runs down to the fold, so the
+   greeting opens over the photo, never over copy or buttons. Heroes without a photo keep that bottom
+   area as part of the hero, marked by the decorative rings. The rest of the hero (.hero-rest)
+   follows below the first screen.
+   Desktop: the hero hugs its content (photo as tall as the copy, equal top and bottom padding); the
+   bubble opens in the bottom-right corner, over the page margin or the hero background. */
 :root { --chat-zone: 210px; --hero-top: 24px; }
-@media (min-width: 960px) { :root { --chat-zone: 200px; --hero-top: 84px; } }
+@media (min-width: 960px) { :root { --chat-zone: 200px; --hero-top: 72px; } }
+@media (min-width: 1080px) { :root { --hero-top: 96px; } }
 
 /* Home hero: the desk photo with a navy wash from the left, the right side of the photo left clear */
 .home-hero { position: relative; overflow: hidden; background: var(--navy); color: var(--on-navy); }
@@ -307,12 +310,34 @@ body.menu-open chat-widget { display: none !important; }
     padding-bottom: var(--chat-zone);
   }
   .hero-first > .eyebrow { margin-bottom: 12px; }
-  /* The photo fills the space between the buttons and the band kept for the chat bubble */
+  /* Heroes with a photo: the photo fills the space from the buttons down to the fold, so the chat
+     greeting opens over the photo; there is no empty band. */
+  .has-media > .hero-first { padding-bottom: 0; }
   .hero-first > .page-hero-media { position: relative; flex: 1 1 0; min-height: 150px; margin-top: 20px; }
   .hero-first > .page-hero-media img { position: absolute; inset: 0; height: 100%; }
+  .has-media > .hero-rest { padding-top: 28px; }
+  /* Heroes without a photo: the decorative rings sit in the bottom area where the greeting opens */
+  .page-hero > .hero-mark {
+    display: block; position: absolute; right: -96px; bottom: 28px; width: 300px; height: 300px;
+    border: 1px solid var(--line-navy); border-radius: 50%; pointer-events: none;
+  }
+  .page-hero > .hero-mark::after { content: ""; position: absolute; inset: 26px; border: 1px solid var(--line-navy); border-radius: 50%; }
+  .page-hero > .hero-mark::before { content: ""; position: absolute; inset: 64px; border: 1px solid rgba(221, 176, 73, 0.22); border-radius: 50%; }
   /* A hero with no photo sits in the middle of the space above the band */
   .solo > .hero-first, .home-hero .hero-first { justify-content: center; }
   .page-hero .hero-rest { padding-bottom: 52px; }
+  /* Heroes without a photo (privacy, terms, 404): all of the hero's text sits in the first screen,
+     centred between the header and the chat greeting, so the space the greeting needs is split evenly
+     above and below the text instead of forming one band. The hero ends just above the fold, so the
+     next section's text never starts under the greeting. */
+  .page-hero-grid.solo {
+    display: flex; flex-direction: column; justify-content: center;
+    min-height: calc(100vh - var(--header-h) - var(--hero-top) - 64px);
+    min-height: calc(100svh - var(--header-h) - var(--hero-top) - 64px);
+    padding-bottom: calc(var(--chat-zone) - 50px);
+  }
+  .page-hero .solo > .hero-first { min-height: 0; padding-bottom: 0; }
+  .page-hero .solo > .hero-rest { padding: 24px 0 0; }
   .page-hero .hero-rest .answer { font-size: 18px; }
   .home-hero-inner { padding-bottom: 52px; }
   /* Phone home: the photo fills the first screen; the rest of the hero sits on plain navy below it */
@@ -323,40 +348,40 @@ body.menu-open chat-widget { display: none !important; }
 
 @media (min-width: 960px) {
   .page-hero-grid {
-    min-height: min(calc(100vh - var(--header-h) - var(--hero-top)), 860px);
-    padding-bottom: 88px; align-items: start;
+    padding-bottom: var(--hero-top); align-items: start;
     grid-template-areas: "eyebrow" "title" "lede" "cta";
     grid-template-rows: auto auto auto 1fr;
   }
-  .page-hero-grid.solo { min-height: 0; padding-bottom: 96px; }
-  /* A short hero with buttons (the 404 page) still fills the first screen, so nothing below it sits under the bubble */
-  .page-hero-grid.solo:has(.btn-row) {
-    min-height: min(calc(100vh - var(--header-h) - var(--hero-top)), 860px);
-    padding-bottom: var(--chat-zone); grid-template-rows: repeat(4, auto); align-content: center;
-  }
+
   .page-hero-grid.has-media {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); column-gap: 64px;
-    grid-template-areas: "eyebrow media" "title media" "lede media" "cta media" ". media";
-    grid-template-rows: repeat(4, auto) 1fr;
+    grid-template-areas: ". media" "eyebrow media" "title media" "lede media" "cta media" ". media";
+    grid-template-rows: 1fr repeat(4, auto) 1fr;
   }
   .page-hero-grid .hero-first, .page-hero-grid .hero-rest { display: contents; }
   .page-hero-grid .eyebrow { grid-area: eyebrow; justify-self: start; margin-bottom: 18px; }
   .page-hero-grid h1 { grid-area: title; }
   .page-hero-grid .answer { grid-area: lede; margin-top: 24px; }
   .page-hero-grid .btn-row { grid-area: cta; margin-top: 34px; justify-self: start; }
-  .page-hero-media { grid-area: media; align-self: start; margin-top: 4px; }
-  /* The photo fills the first screen down to just above the band kept for the chat bubble */
-  .page-hero-media img { height: clamp(300px, calc(100vh - var(--header-h) - var(--hero-top) - var(--chat-zone) - 32px), 560px); }
+  /* The photo is at least as tall as the copy beside it, and the copy is centred against it, so the
+     hero hugs its content with equal padding above and below. The photo's minimum height follows the
+     screen height (320 to 560px) so the section after the hero starts at the fold, keeping its text
+     clear of the chat greeting in the bottom-right corner. */
+  .page-hero-media {
+    grid-area: media; align-self: stretch; position: relative;
+    min-height: clamp(320px, calc(100vh - var(--header-h) - var(--hero-top) * 2 - 104px), 560px);
+  }
+  .page-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; }
   /* Alternate heroes (every other service): a narrower, taller photo column, same plain frame */
   .page-hero-grid.has-media.alt { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
 
-  .home-hero { display: flex; align-items: center; min-height: max(640px, min(calc(100vh - var(--header-h)), 900px)); }
+  .home-hero { display: flex; align-items: center; }
   .home-hero > .wrap { width: 100%; }
   .home-hero-bg { object-position: 62% center; }
   .home-hero::after {
     background: linear-gradient(90deg, rgba(5, 21, 49, 0.95) 0%, rgba(5, 21, 49, 0.88) 34%, rgba(5, 21, 49, 0.45) 58%, rgba(5, 21, 49, 0.08) 82%, rgba(5, 21, 49, 0) 100%);
   }
-  .home-hero-inner { padding-top: 112px; padding-bottom: 112px; }
+  .home-hero-inner { padding-top: 80px; padding-bottom: 80px; }
   .home-hero-copy { max-width: 600px; display: flex; flex-direction: column; }
   .home-hero-copy .hero-first, .home-hero-copy .hero-rest { display: contents; }
   .home-hero-copy .eyebrow { order: 1; }
@@ -366,6 +391,7 @@ body.menu-open chat-widget { display: none !important; }
   .home-hero-copy .proof { order: 5; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line-navy); gap: 14px 32px; }
 }
 .hero-mark { display: none; }
+@media (min-width: 1080px) { .home-hero-inner { padding-top: 104px; padding-bottom: 104px; } }
 @media (min-width: 1200px) {
   .hero-mark { display: block; position: absolute; right: 48px; top: 50%; width: 380px; height: 380px; transform: translateY(-50%); border: 1px solid var(--line-navy); border-radius: 50%; pointer-events: none; }
   .hero-mark::after { content: ""; position: absolute; inset: 24px; border: 1px solid var(--line-navy); border-radius: 50%; }
@@ -472,6 +498,11 @@ body.menu-open chat-widget { display: none !important; }
   .split.center { align-items: center; }
   .split-media img { aspect-ratio: 4 / 3; }
 }
+/* 404 page, 960 to 1079px wide: the two link lists stack, so the right-hand list never starts under the
+   chat greeting in the bottom-right corner */
+@media (min-width: 960px) and (max-width: 1079px) {
+  .page-hero:has(> .solo) + .section > .split { grid-template-columns: 1fr; gap: 48px; }
+}
 .split-text h2 { max-width: 20ch; }
 .split-text h2 + p, .split-text h2 + .lead { margin-top: 22px; }
 .split-text > p:not(.eyebrow):not(.lead) { color: var(--muted); }
@@ -496,6 +527,14 @@ body.menu-open chat-widget { display: none !important; }
 
 /* Prose (privacy, terms) */
 .prose { max-width: 780px; }
+/* Desktop: legal text sits left-aligned with the page, leaving the bottom-right corner (where the chat
+   greeting opens) clear */
+@media (min-width: 960px) {
+  .prose {
+    max-width: calc(min(780px, 100vw - 420px) + var(--pad) * 2);
+    margin-left: max(0px, calc((100% - var(--wrap) - var(--pad) * 2) / 2)); margin-right: auto;
+  }
+}
 .prose h2 { font-size: 28px; margin: 48px 0 12px; max-width: none; }
 .prose h2:first-child { margin-top: 0; }
 .prose ul { padding-left: 22px; margin: 0 0 1em; }
